@@ -1,0 +1,21 @@
+#left_col {
+  float: left;
+  margin-right:5px;
+  padding-right:1px;
+  width: 250px;
+}
+
+#main {
+  float:left;
+  margin-left:5px;
+  padding-left:1px;
+}
+
+dt{
+margin-top : 1px;
+padding-top : 1px;
+}
+dd{
+margin-bottom:1px;
+padding-bottom:1px;
+}

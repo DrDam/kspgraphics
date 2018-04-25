@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Comparaison emport de charge utile</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script type="text/javascript" src="../data.js"></script>
+    <script type="text/javascript" src="../lib.js"></script>
+    <script type="text/javascript" src="../graph.js"></script>
+    <script type="text/javascript" src="ksp.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<span style="float:right;"><a href="/">Retour Home</a></span>
+
+<form id='graph_param'>
+    <label>Volumes de fuel</label>
+    <ul>
+        <li>
+            <label><input id="Fuel1" name="Fuel1" type="text" value="1000"/>Fuel minimal (t)*</label>
+        </li>
+        <li>
+            <label><input id="Fuel2" name="Fuel2" type="text" value="9000"/>Fuel maximal (t)*</label>
+        </li>
+        <li>
+            <label><input id="FuelStep" name="FuelStep" type="text" value="10"/>Nombre de points</label>
+        </li>
+    </ul>
+    <label>DeltaV cibles</label>
+    <ul>
+        <li>
+            <label><input id="Dv1" name="Dv1" type="text" value="1000"/>Capacité minimale (m/s)</label>
+        </li>
+        <li>
+            <label><input id="Dv2" name="Dv2" type="text" value="6000"/>Capacité maximale (m/s)</label>
+        </li>
+        <li>
+            <label><input id="DvStep" name="DvStep" type="text" value="6"/>Nombre d'échantillon</label>
+        </li>
+    </ul>
+    <label><input id="ISP" name="ISP" type="text" value="350"/>ISP de l'étage (s)</label><br />
+
+    * La masse des réservoir à vide est estimé à 1/9 de la masse de fuel<br />
+    <input type="submit" value='Rafraichir' name='submit'/>
+</form>
+
+<canvas id="myChart" width="1000" height="400"></canvas>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49265524-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+
+</html>
